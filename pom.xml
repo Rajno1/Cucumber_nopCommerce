@@ -9,44 +9,16 @@
 
   <name>nopCommerseV001_cucumber</name>
   <url>http://maven.apache.org</url>
-  
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
   </properties>
-     
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M4</version>
-        <configuration>
-          <includes>
-            <include>Sample.java</include>
-          </includes>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
- 
- <dependencies>
-
-<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
-<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-compiler-plugin</artifactId>
-    <version>3.8.1</version>
-</dependency>
-
-
-<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
-<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-plugin</artifactId>
-    <version>3.0.0-M4</version>
-</dependency>
+   
+    
+    
+    <dependencies>
 
 <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
 <dependency>
@@ -78,15 +50,6 @@
     <artifactId>cucumber-core</artifactId>
     <version>5.0.0-RC1</version>
 </dependency>
-
-   <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm-deps -->
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-jvm-deps</artifactId>
-    <version>1.0.6</version>
-    <scope>provided</scope>
-</dependency>
-
 
 <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm -->
 <dependency>
@@ -123,10 +86,32 @@
     <artifactId>log4j</artifactId>
     <version>1.2.17</version>
 </dependency>
-  
 
   </dependencies>
-
+  
+  
+  <build>
+  		<plugins>
+  				<plugin>
+  					<groupId>org.apache.maven.plugins</groupId>
+    				<artifactId>maven-compiler-plugin</artifactId>
+    				<version>3.8.1</version>
+  				</plugin>
+  				
+  				<plugin>
+  				     <groupId>org.apache.maven.plugins</groupId>
+    				 <artifactId>maven-surefire-plugin</artifactId>
+  				     <version>3.0.0-M4</version>
+  				     <configuration>
+  				     	<test>Runner.java</test>
+  				     </configuration>
+  				</plugin>
+  		
+  		</plugins>
+  
+  	
+  </build>
+  
  </project>
 
 
