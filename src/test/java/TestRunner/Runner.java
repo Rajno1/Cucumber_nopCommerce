@@ -13,7 +13,7 @@ import io.cucumber.junit.CucumberOptions;
 				"html:test_output"},
 		tags= {"@DeleteCustomerRole"},  // to run only specific scenario
 		monochrome = true,
-		dryRun = true
+		dryRun = false
 		
 		)
 public class Runner {
