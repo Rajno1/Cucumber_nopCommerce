@@ -11,9 +11,9 @@ import io.cucumber.junit.CucumberOptions;
 		glue = "StepDefinitions",  
 		plugin= {"pretty",
 				"html:test_output"},
-		//tags= {"@sanity,@Regression"},  // to run only specific scenario
+		tags= {"@DeleteCustomerRole"},  // to run only specific scenario
 		monochrome = true,
-		dryRun = true	
+		dryRun = true
 		
 		)
 public class Runner {
